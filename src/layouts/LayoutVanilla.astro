@@ -52,7 +52,16 @@ const { title } = Astro.props;
 				</a>						
 			</div>
 			<div class="container flex justify-around text-white mb-2 items-center">
-				<a class="h-10 text-lg rounded-full border-2 text-center px-4 flex items-center" href="">Todas las categorías</a>
+				<a class="h-10 group flex relative text-lg rounded-full border-2 text-center px-4" href="#">
+					Todas las categorías
+					<menu class="hidden group-hover:block left-0 top-7 w-full absolute bg-zinc-800">
+						<ul>
+							<li>opcion 1</li>
+							<li>opcion 2</li>
+							<li>opcion 3</li>
+						</ul>
+					</menu>
+				</a>
 				<a class="h-10 text-lg pt-[6px]" href="">+3 artículos desde US $2.99</a>
 				<a class="h-10 text-lg pt-[6px]" href="">SuperOfertas</a>
 				<a class="h-10 text-lg pt-[6px]" href="">Plaza</a>
@@ -61,6 +70,7 @@ const { title } = Astro.props;
 				<a class="h-10 text-lg pt-[6px]" href="">Más</a>
 			</div>
 		</div>
+		
 		<!-- <div class="advertisements">
 
 		</div>
@@ -71,38 +81,6 @@ const { title } = Astro.props;
 
 		</div> -->
 		<slot />
+		
 	</body>
 </html>
-<style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
-	}
-	body {
-		padding: 0;
-		margin: 0;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
-</style>
